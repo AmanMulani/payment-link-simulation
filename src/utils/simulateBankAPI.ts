@@ -6,11 +6,10 @@ export type simulateBankAPIParam = {
 }
 
 export const simulateBankAPI = async ({ responseTime, phoneNumber, amount, bankName }: simulateBankAPIParam): Promise<string> => {
-
     //Returns the link from the phoneNumber and amount after responseTime milliseconds.
     return new Promise(res =>
         setTimeout(
-            () => res(`${bankName}/${phoneNumber}/${amount}`),
+            () => res(`${bankName}/${phoneNumber}/${amount}-${responseTime}`),
             responseTime
         )
     );
