@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["es2017", "es2015",  "dom", "es2020.promise"],
+        "target": "esnext",
+        "noImplicitAny": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "rootDir": "src",
+        "outDir": "dist",
+        "baseUrl": "src",
+        "skipLibCheck": true,
+        "strict": true,
+        "strictFunctionTypes": false,
+        "strictNullChecks": false
+    },
+    "include": ["src"],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
