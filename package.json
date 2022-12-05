@@ -1,7 +1,7 @@
 {
-    "name": "satellite-service",
+    "name": "payment-link-simulation",
     "version": "1.0.0",
-    "description": "Backend service for satellite-auth library",
+    "description": "Payment Link Simulation",
     "main": "dist/server.js",
     "engines": {
         "node": ">=14.x"
