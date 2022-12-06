@@ -13,6 +13,12 @@ export const simulateBankAPI = async ({ responseTime, phoneNumber, amount, bankN
         //When we have responseTime less than 0, then throw an error, reporting the bank's system downtime.
         throw new Error(bankApiErrorMessage);
     }
+
+    if (responseTime > 50) {
+        await new Promise(res => setTimeout(res, 50));
+        throw new Error(bankApiErrorMessage);
+    }
+
     return new Promise(res =>
         setTimeout(
             () => res(`${bankName}/${phoneNumber}/${amount}-${responseTime}`),
